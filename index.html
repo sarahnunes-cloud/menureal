@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MenuReal | Cardápio 3D</title>
+
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf3;
+      color: #30251f;
+    }
+
+    header {
+      background: #34231d;
+      color: white;
+      padding: 22px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 7px 0 0;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: auto;
+      padding: 22px;
+    }
+
+    .tag {
+      color: #a65b32;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+    }
+
+    .description {
+      color: #75675e;
+      line-height: 1.5;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 340px;
+      background: #f2e9dc;
+      border-radius: 18px;
+      margin: 18px 0;
+    }
+
+    .ar-button {
+      background: #a64e2e;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 13px 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .price {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 18px 0;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #81736a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #81736a;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MenuReal</h1>
+    <p>SEU CARDÁPIO EM UMA NOVA DIMENSÃO</p>
+  </header>
+
+  <main>
+    <span class="tag">Experiência 3D</span>
+
+    <h2>Pizza Especial</h2>
+
+    <p class="description">
+      Uma experiência diferente para conhecer seu próximo pedido.
+      Gire a pizza, observe os detalhes e explore o modelo em 3D.
+    </p>
+
+    <model-viewer
+      src="pizza-original-tableware-and-food-prop.glb"
+      alt="Modelo 3D de uma pizza"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      exposure="1">
+
+      <button slot="ar-button" class="ar-button">
+        Visualizar na minha mesa
+      </button>
+
+    </model-viewer>
+
+    <p class="note">
+      Toque e arraste para girar o modelo.
+      Use o botão para experimentar a realidade aumentada,
+      quando disponível.
+    </p>
+
+    <div class="price">R$ 49,90</div>
+
+    <p class="note">
+      Preço meramente ilustrativo para demonstração do protótipo.
+    </p>
+  </main>
+
+  <footer>
+    MenuReal © 2026 — Cardápio digital interativo
+  </footer>
+
+</body>
+</html>
